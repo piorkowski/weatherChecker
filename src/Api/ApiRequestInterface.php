@@ -7,5 +7,5 @@ namespace App\Api;
 
 interface ApiRequestInterface
 {
-
+    public function checkWeatherForCityByApi(string $city);
 }

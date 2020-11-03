@@ -29,3 +29,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Api\OpenWeatherMapApi:
+        arguments:
+            $apiKey: '%env(OPEN_WEATHER_MAP_API_ID)%'
+    App\Api\WeatherApi:
+        arguments:
+            $apiKey: '%env(WEATHER_API_KEY)%'

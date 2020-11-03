@@ -1,11 +1,34 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Api;
 
-namespace App\Services\External;
+use App\Exception\ErrorOpenWeatherMapApiException;
+use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-
-class OpenWeatherMapApi
+final class OpenWeatherMapApi extends AbstractApiRequest
 {
-    const BASE_URL = 'api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}';
+    protected $url = 'api.openweathermap.org/data/2.5/weather?';
+
+    public function __construct(HttpClientInterface $httpClient, string $apiKey)
+    {
+        parent::__construct($httpClient, $apiKey);
+    }
+
+    public function checkWeatherForCityByApi(string $city): string
+    {
+        try {
+            $response = $this->httpClient->request('GET', $this->createUrl($city));
+        } catch (TransportExceptionInterface $e) {
+            throw new ErrorOpenWeatherMapApiException($e->getMessage());
+        }
+
+        return json_decode($response, true);
+    }
+
+    private function createUrl(string $city): string
+    {
+        return $this->url . 'q=' . $city . '&appid=' . $this->apiKey;
+    }
 }

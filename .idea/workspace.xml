@@ -11,9 +11,187 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d983ba-d719-49e9-9891-72fc4377b299" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_27_20__10_54_AM.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/weatherChecker.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/assets.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/aria_log.00000001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/aria_log_control" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/ib_buffer_pool" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/ib_logfile0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/ibdata1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/ibtmp1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/multi-master.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/column_stats.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/column_stats.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/column_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/columns_priv.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/columns_priv.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/columns_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/db.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/db.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/db.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/db.opt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/event.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/event.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/event.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/func.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/func.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/func.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/general_log.CSM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/general_log.CSV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/general_log.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/global_priv.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/global_priv.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/global_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/gtid_slave_pos.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/gtid_slave_pos.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_category.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_category.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_category.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_keyword.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_keyword.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_keyword.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_relation.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_relation.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_relation.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_topic.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_topic.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/help_topic.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/index_stats.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/index_stats.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/index_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/innodb_index_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/innodb_index_stats.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/innodb_table_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/plugin.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/plugin.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/plugin.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/proc.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/proc.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/proc.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/procs_priv.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/procs_priv.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/procs_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/proxies_priv.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/proxies_priv.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/proxies_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/roles_mapping.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/roles_mapping.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/roles_mapping.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/servers.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/servers.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/servers.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/slow_log.CSM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/slow_log.CSV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/slow_log.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/table_stats.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/table_stats.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/table_stats.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/tables_priv.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/tables_priv.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/tables_priv.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_leap_second.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_leap_second.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_leap_second.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_name.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_name.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_name.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_transition.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_transition.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_transition.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_transition_type.MAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_transition_type.MAI" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/time_zone_transition_type.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/transaction_registry.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/transaction_registry.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/mysql/user.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/performance_schema/db.opt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/weather_checker/db.opt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/weather_checker/doctrine_migration_versions.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/weather_checker/doctrine_migration_versions.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/weather_checker/report.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/weather_checker/report.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/weather_checker/user.frm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/database/data/weather_checker/user.ibd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/logs/nginx/access.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/logs/nginx/error.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/conf.d/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/sites/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php-fpm/wait-for-it.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201102200316.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/styles/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/styles/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Api/AbstractApiRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Api/ApiRequestInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Api/OpenWeatherMapApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Api/WeatherApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Traits/TimestampableTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Traits/UserableTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exception/ErrorOpenWeatherMapApiException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exception/ErrorWeatherApiException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/ReportFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RequestCityWeatherType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ReportRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/AbstractWeatherChecker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/External/AbstractConnectApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/External/WeatherApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/External/connectApiInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/WeatherCheckerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/error403.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/error404.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/error500.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/city_weather.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/default.en.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/weather.en.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +310,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jI8yQH9jzggoXiBuuluOfSbIKz" />
@@ -144,26 +323,32 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker/nginx" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/bundles/TwigBundle" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/symfony" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/Services" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/bundles/TwigBundle" />
+      <recent name="$PROJECT_DIR$/src/Entity/Traits" />
+      <recent name="$PROJECT_DIR$/src/Exception" />
       <recent name="$PROJECT_DIR$/docker/nginx" />
       <recent name="$PROJECT_DIR$/docker/database" />
-      <recent name="$PROJECT_DIR$/src/Entity/Traits" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets" />
+      <recent name="$PROJECT_DIR$/public/assets/favicons" />
+      <recent name="$PROJECT_DIR$/public/assets/images" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/Api" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -183,7 +368,8 @@
       <workItem from="1604048820507" duration="272000" />
       <workItem from="1604050236101" duration="3561000" />
       <workItem from="1604060901421" duration="103000" />
-      <workItem from="1604061933584" duration="1416000" />
+      <workItem from="1604061933584" duration="3251000" />
+      <workItem from="1604319425558" duration="22645000" />
     </task>
     <servers />
   </component>
@@ -214,25 +400,33 @@
       <screen x="2560" y="23" width="2560" height="1337" />
     </state>
     <state x="3476" y="474" key="#com.intellij.fileTypes.FileTypeChooser/2560.23.2560.1337/0.23.2560.1417/5120.-559.1080.2537@2560.23.2560.1337" timestamp="1604062927317" />
-    <state x="3629" y="394" key="#com.intellij.ide.util.MemberChooser" timestamp="1604011048370">
+    <state x="3629" y="394" key="#com.intellij.ide.util.MemberChooser" timestamp="1604359159641">
       <screen x="2560" y="23" width="2560" height="1417" />
     </state>
-    <state x="3629" y="394" key="#com.intellij.ide.util.MemberChooser/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604011048370" />
+    <state x="3629" y="394" key="#com.intellij.ide.util.MemberChooser/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604359159641" />
+    <state x="3578" y="438" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604359111259">
+      <screen x="2560" y="23" width="2560" height="1417" />
+    </state>
+    <state x="3578" y="438" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604359111259" />
     <state x="3548" y="536" width="808" height="473" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1604010741688">
       <screen x="2560" y="23" width="2560" height="1417" />
     </state>
     <state x="3548" y="536" width="808" height="473" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604010741688" />
+    <state x="456" y="280" key="EditFileWatcherDialog" timestamp="1604332058521">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state x="456" y="280" key="EditFileWatcherDialog/0.23.1680.947@0.23.1680.947" timestamp="1604332058521" />
     <state x="3396" y="425" key="IDE.errors.dialog" timestamp="1604060982318">
       <screen x="2560" y="23" width="2560" height="1337" />
     </state>
     <state x="3396" y="425" key="IDE.errors.dialog/2560.23.2560.1337/0.23.2560.1417/5120.-559.1080.2537@2560.23.2560.1337" timestamp="1604060982318" />
     <state x="3396" y="449" key="IDE.errors.dialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604057278961" />
-    <state x="958" y="417" key="NewPhpClassDialog" timestamp="1604053316600">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state x="3519" y="440" key="NewPhpClassDialog" timestamp="1604358538704">
+      <screen x="2560" y="23" width="2560" height="1417" />
     </state>
     <state x="629" y="302" key="NewPhpClassDialog/0.23.1680.947@0.23.1680.947" timestamp="1603531539454" />
     <state x="958" y="417" key="NewPhpClassDialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@0.23.2560.1337" timestamp="1604053316600" />
-    <state x="3519" y="440" key="NewPhpClassDialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1603490282392" />
+    <state x="3519" y="440" key="NewPhpClassDialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604358538704" />
     <state x="3630" y="637" key="NewPhpFileDialog" timestamp="1603487170332">
       <screen x="2560" y="23" width="2560" height="1417" />
     </state>
@@ -252,15 +446,19 @@
       <screen x="2560" y="23" width="2560" height="1337" />
     </state>
     <state x="3744" y="518" key="cloudConfig.SelfSettingsDialog/2560.23.2560.1337/0.23.2560.1417/5120.-559.1080.2537@2560.23.2560.1337" timestamp="1604060995796" />
-    <state x="2718" y="146" width="2193" height="1123" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604009295267">
+    <state x="2718" y="146" width="2193" height="1123" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604415831501">
       <screen x="2560" y="23" width="2560" height="1417" />
     </state>
-    <state x="2718" y="146" width="2193" height="1123" key="com.intellij.history.integration.ui.views.FileHistoryDialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604009295267" />
+    <state x="2718" y="146" width="2193" height="1123" key="com.intellij.history.integration.ui.views.FileHistoryDialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604415831501" />
     <state x="3530" y="575" key="git4idea.ui.GitResetDialog" timestamp="1604065283894">
       <screen x="2560" y="23" width="2560" height="1337" />
     </state>
     <state x="3530" y="575" key="git4idea.ui.GitResetDialog/2560.23.2560.1337/0.23.2560.1417/5120.-559.1080.2537@2560.23.2560.1337" timestamp="1604065283894" />
     <state x="3530" y="608" key="git4idea.ui.GitResetDialog/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604009286571" />
+    <state x="3505" y="318" width="670" height="675" key="run.anything.popup" timestamp="1604344196471">
+      <screen x="2560" y="23" width="2560" height="1417" />
+    </state>
+    <state x="3505" y="318" width="670" height="675" key="run.anything.popup/2560.23.2560.1417/0.23.2560.1337/5120.-559.1080.2537@2560.23.2560.1417" timestamp="1604344196471" />
     <state x="3479" y="347" key="search.everywhere.popup" timestamp="1604006778252">
       <screen x="2560" y="23" width="2560" height="1417" />
     </state>

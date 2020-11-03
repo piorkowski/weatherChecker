@@ -5,6 +5,6 @@ namespace App\Exception;
 
 use Symfony\Component\HttpFoundation\Exception\RequestExceptionInterface;
 
-class ErrorOpenWeatherMapApiException extends \Exception implements RequestExceptionInterface
+class ErrorWeatherApiException extends \Exception implements RequestExceptionInterface
 {
 }

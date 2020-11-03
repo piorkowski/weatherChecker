@@ -3,40 +3,41 @@ declare(strict_types=1);
 
 namespace App\Entity\Traits;
 
+use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
 
-trait TimestampableTrait
+trait UserableTrait
 {
     /**
-     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
      */
-    private $createdAt;
+    private $createdBy;
 
     /**
-     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
      */
-    private $updatedAt;
+    private $updatedBy;
 
-    public function getCreatedAt(): ?\DateTime
+    public function getCreatedBy(): ?User
     {
-        return $this->createdAt;
+        return $this->createdBy;
     }
 
-    public function setCreatedAt(\DateTime $createdAt): self
+    public function setCreatedBy(User $createdBy): self
     {
-        $this->createdAt = $createdAt;
+        $this->createdBy = $createdBy;
 
         return $this;
     }
 
-    public function getUpdatedAt(): ?\DateTime
+    public function getUpdatedBy(): ?User
     {
-        return $this->updatedAt;
+        return $this->updatedBy;
     }
 
-    public function setUpdatedAt(\DateTime $updatedAt): self
+    public function setUpdatedBy(User $updatedBy): self
     {
-        $this->updatedAt = $updatedAt;
+        $this->updatedBy = $updatedBy;
 
         return $this;
     }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use App\Entity\Traits\TimestampableTrait;
+use App\Entity\Traits\UserableTrait;
 use App\Repository\ReportRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -13,6 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Report
 {
     use TimestampableTrait;
+    use UserableTrait;
 
     /**
      * @ORM\Id
@@ -39,12 +41,16 @@ class Report
     public function __construct(
         string $city,
         float $avg_temp,
-        string $ip
+        string $ip,
+        ?User $user
     )
     {
         $this->city = $city;
         $this->avg_temp = $avg_temp;
         $this->ip = $ip;
+        $this->createdBy = $user;
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int

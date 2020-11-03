@@ -25,6 +25,7 @@ trait TimestampableTrait
     public function setCreatedAt(\DateTime $createdAt): self
     {
         $this->createdAt = $createdAt;
+        $this->updatedAt = $createdAt;
 
         return $this;
     }
