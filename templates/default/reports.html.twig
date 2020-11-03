@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table>
+        <thead>
+        <tr>{{ 'report.city' }}</tr>
+        <tr>{{ 'report.avg_temp' }}</tr>
+        <tr>{{ 'report.ip' }}</tr>
+        <tr>{{ 'report.user' }}</tr>
+        <tr>{{ 'report.createdAt' }}</tr>
+        </thead>
+        <tbody>
+        {% for report in reports %}
+            <tr>
+                <td>{{ report.city }}</td>
+                <td>{{ report.avg_temp }}</td>
+                <td>{{ report.ip }}</td>
+                <td>{{ report.createdBy }}</td>
+                <td>{{ report.createdAt }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

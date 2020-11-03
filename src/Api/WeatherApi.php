@@ -5,6 +5,10 @@ namespace App\Api;
 
 use App\Exception\ErrorOpenWeatherMapApiException;
 use App\Exception\ErrorWeatherApiException;
+use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -17,7 +21,7 @@ final class WeatherApi extends AbstractApiRequest
         parent::__construct($httpClient, $apiKey);
     }
 
-    public function checkWeatherForCityByApi(string $city): string
+    public function checkWeatherForCityByApi(string $city)
     {
         try {
             $response = $this->httpClient->request('GET', $this->createUrl($city));
@@ -25,13 +29,23 @@ final class WeatherApi extends AbstractApiRequest
             throw new ErrorWeatherApiException($e->getMessage());
         }
 
-        return json_decode($response, true);
+        try {
+            return $response->toArray();
+        } catch (ClientExceptionInterface $e) {
+        } catch (DecodingExceptionInterface $e) {
+        } catch (RedirectionExceptionInterface $e) {
+        } catch (ServerExceptionInterface $e) {
+        } catch (TransportExceptionInterface $e) {
+        }
     }
 
-
-
-    private function createUrlRequest(string $city): string
+    public function getTempForCity(string $city): float
     {
+        return (float) $this->checkWeatherForCityByApi($city)['current']['temp_c'];
+    }
 
+    protected function createUrl(string $city): string
+    {
+        return $this->url . 'key=' . $this->apiKey . '&q=' . $city;
     }
 }
