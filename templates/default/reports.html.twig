@@ -13,10 +13,10 @@
         {% for report in reports %}
             <tr>
                 <td>{{ report.city }}</td>
-                <td>{{ report.avg_temp }}</td>
+                <td>{{ report.avgTemp }}</td>
                 <td>{{ report.ip }}</td>
                 <td>{{ report.createdBy }}</td>
-                <td>{{ report.createdAt }}</td>
+                <td>{{ report.createdAt|date('d-m-Y H:i:s') }}</td>
             </tr>
         {% endfor %}
         </tbody>
