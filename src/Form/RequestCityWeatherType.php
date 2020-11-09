@@ -34,7 +34,10 @@ class RequestCityWeatherType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => null
+            'data_class' => null,
+            'attr' => [
+                'class' => 'form-inline'
+            ]
         ]);
     }
 }

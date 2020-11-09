@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DefaultController!{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
-
-    <div class="example-wrapper">
-        {{ form(form) }}
+    <div class="row">
+        <div class="col-md">
+            {{ form_start(form) }}
+            <div class="form-group mb-2">
+                {{ form_widget(form.city) }}
+            </div>
+            {{ form_widget(form.submit) }}
+            {{ form_rest(form) }}
+            {{ form_end(form) }}
+        </div>
     </div>
-
 {% endblock %}
