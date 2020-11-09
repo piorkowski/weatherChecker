@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Form\RequestCityWeatherType;
 use App\Services\ReportServiceInterface;
 use App\Services\WeatherCheckerServiceInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -72,32 +73,40 @@ class DefaultController extends AbstractController
     /**
      * @Route("/reports/user", name="user_reports")
      * @param Request $request
+     * @param PaginatorInterface $paginator
      * @return Response
      * @IsGranted("ROLE_USER")
      */
-    public function userReports(Request $request): Response
+    public function userReports(Request $request, PaginatorInterface $paginator): Response
     {
-        $reports = $this->reportService->getUserReports($this->getUser());
+        $pagination = $paginator->paginate(
+            $this->reportService->getUserReports($this->getUser()),
+            $request->query->getInt('page', 1)
+        );
 
         return $this->render('default/reports.html.twig', [
             'controller_name' => 'DefaultController',
-            'reports' => $reports
+            'pagination' => $pagination,
         ]);
     }
 
     /**
      * @Route("/reports/all", name="all_reports")
      * @param Request $request
+     * @param PaginatorInterface $paginator
      * @return Response
      * @IsGranted("ROLE_ADMIN")
      */
-    public function allReports(Request $request): Response
+    public function allReports(Request $request, PaginatorInterface $paginator): Response
     {
-        $reports = $this->reportService->getAllReports();
+        $pagination = $paginator->paginate(
+            $this->reportService->getAllReports(),
+            $request->query->getInt('page', 1)
+        );
 
         return $this->render('default/reports.html.twig', [
             'controller_name' => 'DefaultController',
-            'reports' => $reports
+            'pagination' => $pagination,
         ]);
     }
 }

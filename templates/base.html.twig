@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="icon" type="image/png" href="/assets/favicon.ico">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ 'title'|trans({}, 'default') }} | {% block title %}{% endblock %}</title>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
-<body>
-<div class="container-fluid">
-    {% block body %}
+<body class="text-center">
+{% include "common/_nav.html.twig" %}
 
-    {% endblock %}
-</div>
+<main role="main" class="container">
+    {% block body %}{% endblock %}
+</main>
+
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
 {% endblock %}

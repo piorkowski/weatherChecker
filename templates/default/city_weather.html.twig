@@ -1,10 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<h1>{{ city }}</h1>
-<h1>{{ avg_temp }}</h1>
-{% endblock %}
-
 {% block title %}
-
+    Weather in {{ city|upper }}
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <section class="jumbotron">
+        <div class="container">
+            <h1>{{ city|upper }}</h1>
+            <h1>{{ avg_temp }}</h1>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+

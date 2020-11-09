@@ -2,16 +2,26 @@
 
 {% block title %}Home{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
 {% block body %}
     <div class="row">
-        <div class="col-md">
+        <div class="col">
             {{ form_start(form) }}
-            <div class="form-group mb-2">
+            <div class="form-group mx-sm-3 mb-2">
+                {{ form_label(form.city) }}
                 {{ form_widget(form.city) }}
             </div>
+
             {{ form_widget(form.submit) }}
             {{ form_rest(form) }}
             {{ form_end(form) }}
         </div>
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
 {% endblock %}

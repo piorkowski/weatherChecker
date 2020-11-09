@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="{{ url('default') }}">{{ 'title'|trans({}, 'default') }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url('default') }}">Home <span class="sr-only"></span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    {% if app.user is null %}
+                        <a class="dropdown-item" href="{{ url('app_login' ) }}">{{ 'login'|trans({}, 'default') }}</a>
+                    {% endif %}
+
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a class="dropdown-item"
+                           href="{{ url('all_reports') }}">{{ 'all reports'|trans({},'default') }}</a>
+                    {% endif %}
+                    {% if app.user is not null %}
+                        <a class="dropdown-item"
+                           href="{{ url('user_reports') }}">{{ 'my reports'|trans({}, 'default') }}</a>
+                        <a class="dropdown-item" href="{{ url('app_logout') }}">{{ 'logout'|trans({}, 'default') }}</a>
+                    {% endif %}
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" method="post" action="{{ url('default') }}" id="navSearchForm">
+            <input class="form-control mr-sm-2" name="city" type="text" placeholder="{{ 'info'|trans({}, 'default') }}"
+                   aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit"
+                    onclick="this.submit()">{{ 'check'|trans({}, 'default') }}</button>
+        </form>
+    </div>
+</nav>

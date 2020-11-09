@@ -1,17 +1,38 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+    {% if app.request.uri is same as url('user_reports') %}
+        {{ 'user reports'|trans({}, 'default') }}
+    {% elseif app.request.uri is same as url('all_reports') %}
+        {{ 'all reports'|trans({}, 'default') }}
+    {% else %}
+        {{ 'reports'|trans({}, 'default') }}
+    {% endif %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
 {% block body %}
-    <table>
+    <div class="count">
+        {{ pagination.getTotalItemCount }}
+    </div>
+    <table class="table table-bordered">
         <thead>
-        <tr>{{ 'report.city' }}</tr>
-        <tr>{{ 'report.avg_temp' }}</tr>
-        <tr>{{ 'report.ip' }}</tr>
-        <tr>{{ 'report.user' }}</tr>
-        <tr>{{ 'report.createdAt' }}</tr>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">{{ 'report.city' }}</th>
+            <th scope="col">{{ 'report.avg_temp' }}</th>
+            <th scope="col">{{ 'report.ip' }}</th>
+            <th scope="col">{{ 'report.user' }}</th>
+            <th scope="col">{{ 'report.createdAt' }}</th>
+        </tr>
         </thead>
         <tbody>
-        {% for report in reports %}
+        {% for report in pagination %}
             <tr>
+                <th scope="row"> {{ loop.index }}</th>
                 <td>{{ report.city }}</td>
                 <td>{{ report.avgTemp }}</td>
                 <td>{{ report.ip }}</td>
@@ -21,9 +42,13 @@
         {% endfor %}
         </tbody>
     </table>
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 {% endblock %}
 
-{% block title %}
-
+{% block javascripts %}
+    {{ parent() }}
 {% endblock %}
+
 

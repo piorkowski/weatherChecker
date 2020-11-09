@@ -5,6 +5,7 @@ namespace App\Services;
 
 use App\Entity\Report;
 use App\Entity\User;
+use Doctrine\ORM\Query;
 
 interface ReportServiceInterface
 {
