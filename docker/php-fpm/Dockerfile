@@ -13,6 +13,8 @@ RUN apk add --no-cache \
     icu-dev \
     && docker-php-ext-install -j$(nproc) intl \
     && docker-php-ext-enable intl \
+    && docker-php-ext-install -j$(nproc) redis \
+    && docker-php-ext-enable redis \
     && rm -rf /tmp/*
 
 RUN echo "error_reporting = E_ALL" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
@@ -32,4 +34,5 @@ RUN echo "xdebug.remote.handler=dbgp" >> /usr/local/etc/php/conf.d/docker-php-ex
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www
 CMD composer install ; wait-for-it database:3306 -- bin/console doctrine:migrations:migrate ;  php-fpm
+CMD bin/console d:f:l
 EXPOSE 9000

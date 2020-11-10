@@ -2,4 +2,18 @@ title: WeatherChecker
 
 city: City
 info: Check your city weather
-check: Check
+check: Check it!
+intro: What weather is in your City?
+user reports: My reports
+all reports: All reports
+reports: Reports
+all counted reports: All reports
+report:
+  city: City
+  avg_temp: Avg temperature
+  ip: IP
+  user: User
+  createdAt: Report date
+avg_temp: Average temperature
+last your checks: Your last checks
+last cities: Last checked cities

@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="{{ url('default') }}">{{ 'title'|trans({}, 'default') }}</a>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="{{ url('default') }}"><img src="{{ asset('favicon.ico') }}" alt="logo" width="30px" height="auto"> {{ 'title'|trans({}, 'default') }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,13 +7,13 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item {% if app.request.uri == url('default') %}active{% endif %}">
                 <a class="nav-link" href="{{ url('default') }}">Home <span class="sr-only"></span></a>
             </li>
 
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown {% if app.request.uri == url('app_login') or app.request.uri == url('all_reports') or app.request.uri == url('user_reports') %}active{% endif %}">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">Dropdown</a>
+                   aria-expanded="false">Menu</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     {% if app.user is null %}
                         <a class="dropdown-item" href="{{ url('app_login' ) }}">{{ 'login'|trans({}, 'default') }}</a>
@@ -34,7 +34,7 @@
         <form class="form-inline my-2 my-lg-0" method="post" action="{{ url('default') }}" id="navSearchForm">
             <input class="form-control mr-sm-2" name="city" type="text" placeholder="{{ 'info'|trans({}, 'default') }}"
                    aria-label="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit"
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
                     onclick="this.submit()">{{ 'check'|trans({}, 'default') }}</button>
         </form>
     </div>

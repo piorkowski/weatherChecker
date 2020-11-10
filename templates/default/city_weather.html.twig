@@ -9,12 +9,10 @@
 {% endblock %}
 
 {% block body %}
-    <section class="jumbotron">
-        <div class="container">
-            <h1>{{ city|upper }}</h1>
-            <h1>{{ avg_temp }}</h1>
-        </div>
-    </section>
+    <div class="jumbotron">
+        <h1>{{ city|upper }}</h1>
+        <h1>{{ avg_temp }} ℃</h1>
+    </div>
 {% endblock %}
 
 {% block javascripts %}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ 'title'|trans({}, 'default') }} | {% block title %}{% endblock %}</title>
@@ -9,7 +9,7 @@
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
-<body class="text-center">
+<body>
 {% include "common/_nav.html.twig" %}
 
 <main role="main" class="container">

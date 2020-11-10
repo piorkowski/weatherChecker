@@ -15,35 +15,39 @@
 {% endblock %}
 
 {% block body %}
-    <div class="count">
-        {{ pagination.getTotalItemCount }}
+    <div class="jumbotron">
+        <p>{{ 'all counted reports'|trans({}, 'default') }}{{ pagination.getTotalItemCount }}</p>
     </div>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">{{ 'report.city' }}</th>
-            <th scope="col">{{ 'report.avg_temp' }}</th>
-            <th scope="col">{{ 'report.ip' }}</th>
-            <th scope="col">{{ 'report.user' }}</th>
-            <th scope="col">{{ 'report.createdAt' }}</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for report in pagination %}
-            <tr>
-                <th scope="row"> {{ loop.index }}</th>
-                <td>{{ report.city }}</td>
-                <td>{{ report.avgTemp }}</td>
-                <td>{{ report.ip }}</td>
-                <td>{{ report.createdBy }}</td>
-                <td>{{ report.createdAt|date('d-m-Y H:i:s') }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    <div class="navigation">
-        {{ knp_pagination_render(pagination) }}
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">{{ 'report.city'|trans({}, 'default') }}</th>
+                    <th scope="col">{{ 'report.avg_temp'|trans({}, 'default') }}</th>
+                    <th scope="col">{{ 'report.ip'|trans({}, 'default') }}</th>
+                    <th scope="col">{{ 'report.user'|trans({}, 'default') }}</th>
+                    <th scope="col">{{ 'report.createdAt'|trans({}, 'default') }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for report in pagination %}
+                    <tr>
+                        <th scope="row"> {{ loop.index }}</th>
+                        <td>{{ report.city }}</td>
+                        <td>{{ report.avgTemp }} ℃</td>
+                        <td>{{ report.ip }}</td>
+                        <td>{{ report.createdBy }}</td>
+                        <td>{{ report.createdAt|date('d-m-Y H:i:s') }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <div class="navigation">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+        </div>
     </div>
 {% endblock %}
 
