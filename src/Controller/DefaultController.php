@@ -12,6 +12,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Cache\CacheInterface;
+use Symfony\Contracts\Cache\ItemInterface;
 
 class DefaultController extends AbstractController
 {
@@ -19,13 +21,17 @@ class DefaultController extends AbstractController
 
     private $reportService;
 
+    private $cache;
+
     public function __construct(
         WeatherCheckerServiceInterface $weatherCheckerService,
-        ReportServiceInterface $reportService
+        ReportServiceInterface $reportService,
+        CacheInterface $cache
     )
     {
         $this->weatherCheckerService = $weatherCheckerService;
         $this->reportService = $reportService;
+        $this->cache = $cache;
     }
 
     /**
@@ -39,6 +45,10 @@ class DefaultController extends AbstractController
             'method' => 'POST',
             'action' => $this->generateUrl('default')
         ]);
+
+        if(($request->getMethod() === 'POST') && $request->get('city')) {
+            return $this->redirectToRoute('checkCityWeather', ['city' => $request->get('city')]);
+        }
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -56,10 +66,17 @@ class DefaultController extends AbstractController
      * @param Request $request
      * @param string $city
      * @return Response
+     * @throws \Psr\Cache\InvalidArgumentException
      */
     public function checkCityWeather(Request $request, string $city): Response
     {
-        $avg_temp = $this->weatherCheckerService->getAvgTempForCity($city);
+        $weatherCheckerService = $this->weatherCheckerService;
+        $avg_temp = $this->cache->get(mb_strtolower($city, 'UTF-8'), function (ItemInterface $item) use ($city, $weatherCheckerService) {
+            $item->expiresAfter(\DateInterval::createFromDateString('1 hour'));
+            $temp = $weatherCheckerService->getAvgTempForCity($city);
+            $item->set($temp);
+            return $temp;
+        });
 
         $this->reportService->createReport($city, $avg_temp, $request->getClientIp(), $this->getUser());
 

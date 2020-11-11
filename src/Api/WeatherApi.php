@@ -16,12 +16,7 @@ final class WeatherApi extends AbstractApiRequest
 {
     protected $url = 'https://api.weatherapi.com/v1/current.json?';
 
-    public function __construct(HttpClientInterface $httpClient, string $apiKey)
-    {
-        parent::__construct($httpClient, $apiKey);
-    }
-
-    public function checkWeatherForCityByApi(string $city)
+    public function checkWeatherForCityByApi(string $city): ?array
     {
         try {
             $response = $this->httpClient->request('GET', $this->createUrl($city));
@@ -37,11 +32,19 @@ final class WeatherApi extends AbstractApiRequest
         } catch (ServerExceptionInterface $e) {
         } catch (TransportExceptionInterface $e) {
         }
+
+        return null;
     }
 
     public function getTempForCity(string $city): float
     {
-        return (float) $this->checkWeatherForCityByApi($city)['current']['temp_c'];
+        try {
+            $response = $this->checkWeatherForCityByApi(transliterator_transliterate('Any-Latin; Latin-ASCII', $city));
+        } catch (ErrorWeatherApiException $e) {
+            throw new \RuntimeException($e->getMessage());
+        }
+
+        return $response['current']['temp_c'];
     }
 
     protected function createUrl(string $city): string

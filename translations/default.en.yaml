@@ -17,3 +17,6 @@ report:
 avg_temp: Average temperature
 last your checks: Your last checks
 last cities: Last checked cities
+my reports: My Reports
+login: Sign In
+logout: Sign Out
